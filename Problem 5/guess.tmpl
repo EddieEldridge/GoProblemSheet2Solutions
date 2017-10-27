@@ -10,16 +10,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body>
-    <h1>{{.PageTitle}}<h1>
-      <ul>
-          {{range .Todos}}
-              {{if .Done}}
-                  <li class="done">{{.Title}}</li>
-              {{else}}
-                  <li>{{.Title}}</li>
-              {{end}}
-          {{end}}
-      </ul/>
+    <h1>Guessing game!</h1>
+    <h2>Guess a number between 1 and 20</h2>
+    <form action="/guess.html" method="get">
+        Guess:<br>
+        <input type="text" name="Guess"><br>
+        <input type="submit" value="Submit">
+        
+      </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
